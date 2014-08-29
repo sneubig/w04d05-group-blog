@@ -6,9 +6,56 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
+	
+	<header>
+			<h1> Travel Blog </h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Posts</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About Me</a></li>
+			</ul>	
+		</nav>
+
+	<div class="sidebar">
+		<div class="Posts">
+			<h2> Recent Posts </h2>
+			<ul>
+				<li><a href="#">Link 1</li>
+				<li><a href="#">Link 2</li>
+				<li><a href="#">Link 3</li>
+				<li><a href="#">Link 4</li>
+				<li><a href="#">Link 5</li>
+			</ul>
+		</div>
+
+		<hr>
+
+		<div class="Ad">
+			
+		</div>
+
+		<hr>
+
+		<div class="Buttons">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Posts</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About Me</a></li>
+			</ul>
+		</div>
+	</div>
 
 <%= yield %>
 
+	<footer>
+		This is the footer
+	</footer>
 </body>
 </html>
