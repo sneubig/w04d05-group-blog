@@ -1,0 +1,21 @@
+<% if @comments.errors.any? %>
+  <ul class="errors">
+    <% @comments.errors.full_messages.each do |err| %>
+      <li> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @comment do |comment| %>
+  <%= comment.label :name, "Your name" %>
+  <%= comment.text_field :name %>
+
+  <%= comment.label :email, "Your comment" %>
+  <%= comment.text_area :email %>
+
+  <%= comment.label :comment, "Your comment" %>
+  <%= comment.text_area :comment %>
+
+  <%= question.button %>
+
+<% end %>
