@@ -1,0 +1,26 @@
+<h2> Create a New Blog Post</h2>
+
+<% if @posts.errors.any? %>
+  <ul class="errors">
+    <% @posts.errors.full_messages.each do |err| %>
+      <li> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @post do |post| %>
+  <%= post.label :title, "Post Title" %>
+  <%= post.text_field :title %>
+
+  <%= post.label :Body, "Blog Content" %>
+  <%= post.text_area :body %>
+
+  <%= post.label :img_url, "Add an image URL" %>
+  <%= post.text_area :img_url %>
+
+  <%= post.label :date, "MM/DD/YY" %>
+  <%= post.text_field :date %>
+
+  <%= question.button %>
+
+<% end %>
